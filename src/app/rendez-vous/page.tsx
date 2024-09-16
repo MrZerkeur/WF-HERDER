@@ -8,11 +8,6 @@ import PageThree from '../components/pagethree';
 
 
 
-
-
-
-
-
 export default function rendezVous(){
 
     const form = useRef<HTMLFormElement | null>(null);
@@ -50,25 +45,27 @@ export default function rendezVous(){
       const serviceID = 'service_j8wuscp';
       const templateID = 'template_6lps7es';
       const userID = 'tKO7GQoDfj0j24_kd';
-  
-      emailjs.send(serviceID, templateID, formData, userID)
-        .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
 
-          setFormData({
-            name: '',
-            lastname: '',
-            telephone: '',
-            codepromo: '',
-            email: '',
-            message: '',
-          });
-          setStep(4);
-        })
-        .catch((err) => {
-          console.error('FAILED...', err);
-          alert('Failed to send message. Please try again.');
-        });
+      setStep(4);
+  
+      // emailjs.send(serviceID, templateID, formData, userID)
+      //   .then((response) => {
+      //     console.log('SUCCESS!', response.status, response.text);
+
+      //     setFormData({
+      //       name: '',
+      //       lastname: '',
+      //       telephone: '',
+      //       codepromo: '',
+      //       email: '',
+      //       message: '',
+      //     });
+      //     setStep(4);
+      //   })
+      //   .catch((err) => {
+      //     console.error('FAILED...', err);
+      //     alert('Failed to send message. Please try again.');
+      //   });
     }
     
 
@@ -102,12 +99,14 @@ export default function rendezVous(){
 
     return(
         <>
+        <div className='not-pro'>
+
             <div className="spacin"></div>
-            <div className="flex justify-center items-center gap-6 flex-col controling-p py-7">
-                <div className="flex gap-6	">
-                <div className={`w-[167px] h-[3px] rounded-full ${step == 1 ? 'bg-[#19967D]' : 'bg-black'}`}></div>
-                <div className={`w-[167px] h-[3px] rounded-full ${step == 2 ? 'bg-[#19967D]' : 'bg-black'}`}></div>
-                <div className={`w-[167px] h-[3px] rounded-full ${step == 3 || step == 4 ? 'bg-[#19967D]' : 'bg-black'}`}></div>
+            <div className="flex justify-center items-center gap-6 flex-col controling-p py-7 ">
+                <div className="flex gap-6 ehm-layer	">
+                <div className={`w-[167px] ehm h-[3px] rounded-full ${step == 1 ? 'bg-[#19967D]' : 'bg-black'}`}></div>
+                <div className={`w-[167px] ehm h-[3px] rounded-full ${step == 2 ? 'bg-[#19967D]' : 'bg-black'}`}></div>
+                <div className={`w-[167px] ehm h-[3px] rounded-full ${step == 3 || step == 4 ? 'bg-[#19967D]' : 'bg-black'}`}></div>
                 </div>
                         
                 {(step === 1 && <div>
@@ -116,8 +115,8 @@ export default function rendezVous(){
                                 Choisissez votre prestation.
                                 </h1>
                             </div>
-                            <div className="flex gap-8">
-                                <div className="bg-[#F7F7F7] w-[277px] rounded-3xl py-4 flex flex-col gap-4 ">
+                            <div className="flex gap-8 glass">
+                                <div className="bg-[#F8F8F8] w-[277px] rounded-3xl py-4 flex flex-col gap-4 ">
                                     <div className="flex justify-center w-full" onMouseOver={handleMouseOver1} onMouseLeave={handleMouseLeave1}>
                                     <video src="/vids/onLap.mp4" ref={videoRef1} width={223}></video>
                                     </div>
@@ -133,7 +132,7 @@ export default function rendezVous(){
 
                                 </div>
 
-                                <div className="bg-[#F7F7F7] w-[277px] rounded-3xl flex flex-col py-4 gap-4">
+                                <div className="bg-[#F8F8F8] w-[277px] rounded-3xl flex flex-col py-4 gap-4">
                                     <div className="flex justify-center w-full" onMouseOver={handleMouseOver2} onMouseLeave={handleMouseLeave2}>
                                     <video src="/vids/onMob.mp4" ref={videoRef2} width={83}></video>
                                     </div>
@@ -155,7 +154,7 @@ export default function rendezVous(){
                     <div>
                     {step === 2 && (
                       <PageOne
-                        formData={formData}
+                      formData={formData}
                         handleChange={handleChange}
                         handleNext={handleNext}
                       />
@@ -183,14 +182,14 @@ export default function rendezVous(){
                         <div>
                             <h1>Un agent Herder prendra le temps de comprendre vos besoins. </h1>
                             <Image src="/imgs-sec-img.png" width={256} height={256} alt="dashi"></Image>
-
+                            
                             <div>
-                                <h1>Nous vous contacterons par mail ou par téléphone afin de convenir ensemble d'une date d'entretien.</h1>
-                                <div>
-                                    <div>Devis gratuit</div>
+                            <h1>Nous vous contacterons par mail ou par téléphone afin de convenir ensemble d'une date d'entretien.</h1>
+                            <div>
+                            <div>Devis gratuit</div>
                                     <div>Réponse sous 24h</div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
                         <div>
 
@@ -198,6 +197,7 @@ export default function rendezVous(){
 
 
                     </div> */}
+          </div>
         </>
     );
 

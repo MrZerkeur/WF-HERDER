@@ -12,18 +12,18 @@ interface PageTwoProps {
 
 const PageTwo: React.FC<PageTwoProps> = ({ formData, handleChange, handleBack, handleSend }) => {
   return (
-    <div className='flex justify-center gap-28'>
+    <div className='flex justify-center nicha gap-28 pb-11'>
         <Rfp />
 
 
-    <div>
+    <div className='w-[450px]  black-box'>
     
     <div className='py-[30px] px-[26px] flex flex-col gap-[22px] bc-p'>
-    <h2>Votre projet</h2>
+    <h2 className='text-[18px]'>Votre projet</h2>
     <div className='flex flex-col gap-[22px]'>
 
       <textarea
-      className='t-input w-[406px] '
+      className='t-input w-full focus:outline-none focus:border-[#19967D] focus:border-2 '
       name="message"
       placeholder="Je souhaiterai avoir un design moderne pour mon site e-commerce de vêtements ..."
       value={formData.message}
@@ -31,13 +31,13 @@ const PageTwo: React.FC<PageTwoProps> = ({ formData, handleChange, handleBack, h
       />
       <div className='checkbox flex gap-[8px] text-[14px]'>
 
-      <input type="checkbox"  />
+      <input id="cb1" type="checkbox" />
       <p>J&apos;accepte de partager mes données pour obtenir des informations</p>
       </div>
       </div>
       <div className='flex flex-col gap-[16px]'>
-        <button className='py-[10px] bg-[#06513E] br' onClick={handleSend}>Envoyer</button>
-        <button className='py-[10px]  br' onClick={handleBack}>Précédent</button>
+        <button className='py-[10px] bg-[#06513E] text-white br button-mutton ' onClick={handleSend}>Envoyer</button>
+        <button className='py-[10px] kilo  br mutton-button' onClick={handleBack}>Précédent</button>
       </div>
     </div>
         </div>
