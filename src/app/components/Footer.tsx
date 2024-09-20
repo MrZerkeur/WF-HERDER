@@ -9,9 +9,15 @@ export default function Footer(){
         <div className="flex items-center w-full justify-center gap-5 py-7  border-t border-black">
         <p className="text-sm	font-bold">Rejoignez-nous sur</p>
         <div className="flex gap-3	">
+        <Link href="https://www.facebook.com/profile.php?id=61562299486895&locale=fr_FR">
                 <Image src="/svg/facebook-brands-solid.svg" className="onhov " height={24} width={24} alt="icon"></Image>
+        </Link>
+        <Link href="https://www.instagram.com/agence_herder/">
                 <Image src="/svg/instagram-brands-solid.svg" className="onhov " height={24} width={24} alt="icon"></Image>
+        </Link>
+        <Link href="https://www.linkedin.com/company/herder-company/">
                 <Image src="/svg/linkedin-brands-solid.svg" className="onhov " height={24} width={24} alt="icon"></Image>
+        </Link>
         </div>
       </div>
         {/* </div> */}

@@ -58,7 +58,7 @@ export default function Home() {
 
         <h1 className="text-4xl font-semibold h1f comph">Expert UI/UX</h1>
         <p className="text-2xl	font-extralight pf compp"> Créateur de visuel d&apos;interface<br /> et d&apos;expérience utilisateur <br />pour site web et application.</p>
-        <button className="bg-[#06513E] px-12	 py-3 rounded-full font-medium button-mutton pointer z-10 bf compb">Votre projet</button>
+        <button className="bg-[#06513E] px-12	 py-3 rounded-full font-medium button-mutton pointer z-[1] bf compb">Votre projet</button>
         </div>
       </div>
       </div>
@@ -71,7 +71,7 @@ export default function Home() {
 
         <h1 className="text-4xl font-semibold h1f comph">Expert UI/UX</h1>
         <p className="text-2xl	font-extralight text-center pf compp"> Créateur de visuel d&apos;interface et d&apos;expérience utilisateur pour site web et application.</p>
-        <button className="bg-[#06513E] px-12	 py-3 rounded-full font-medium button-mutton pointer z-10 bf compb">Votre projet</button>
+        <button className="bg-[#06513E] px-12	 py-3 rounded-full font-medium button-mutton pointer z-[1] bf compb">Votre projet</button>
         </div>
       </div>
     </div>
@@ -94,8 +94,8 @@ export default function Home() {
     src={backi} 
     alt="backroung-img" 
     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
-      <div className="flex justify-center items-center z-10	">
-        <div className="py-6 px-[10%] flex justify-between align-center pcon w-full items-center z-10">
+      <div className="flex justify-center items-center z-[1]	">
+        <div className="py-6 px-[10%] flex justify-between align-center pcon w-full items-center z-[1]">
           <h1 className="text-2xl text-white font-bold iop">Nos designers.</h1>
           <button className="bordering  text-white  px-9 py-3 rounded-full iob">En savoir plus</button>
         </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="desktop">
             <Carousel data={DATA} setbacki={setbacki} />
           </div>
-          <div className="ml-[40px] mobile">
+          <div className="ml-[40px] hem mobile">
             <MobileCarousel data={DITI} setbacki={setbacki}/>
           </div>
 
@@ -122,7 +122,7 @@ export default function Home() {
 
       </div>
 
-      <div className="white-background">
+      <div className="white-background relative">
 
 
       <div className="itxt flex justify-center text-black py-14 bg-[#F8F8F8] goat">
@@ -135,12 +135,17 @@ export default function Home() {
 
  <div className="model-s">
 
-      <Scrovi />
+      <Scrovi titre="/0001-0240.mp4" />
  </div>
+
  <div className="model-v">
- <ScrollFirst />
+ {/* <ScrollFirst /> */}
+ <Scrovi titre="/092.mp4" />
+
  </div>
-      <div className="flex justify-center py-9 pb-11">
+
+
+      <div className="flex justify-center py-9 pb-11 lop">
           <div className="flex fleol items-center gap-7">
 
           <div className="flex items-center justify-center gap-4">
@@ -160,6 +165,7 @@ export default function Home() {
           </div>
       </div>
       </div>
+
 
     </>
 

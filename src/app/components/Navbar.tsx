@@ -68,13 +68,16 @@ export default function Navbar(){
 
       
       {isMenuOpen && (
-        <div className="mobile-menu border-b border-[#454546] md:hidden z-50  bg-black text-white w-full py-5 absolute top-16 left-0 z-20">
+        <div className={`mobile-menu border-b border-[#454546] md:hidden z-50  ${pathname === '/' ?  "bg-[#171519]": "bg-[#f8f8f8]" } text-white w-full py-5 absolute top-16 left-0 h-[100vh]`}>
           <div className="flex flex-col pl-[10%] items-start gap-6">
+          <Link href="/" onClick={toggleMenu}>
+              <p className="pointer text-white bav" style={{ color: textColor(pathname) }}>Acceuil</p>
+            </Link>
             <Link href="/nos-designers" onClick={toggleMenu}>
-              <p className="pointer text-white bav">Nos designers</p>
+              <p className="pointer text-white bav" style={{ color: textColor(pathname) }}>Nos designers</p>
             </Link>
             <Link href="/rendez-vous" onClick={toggleMenu}>
-              <p className="pointer text-white bav">Prendre rendez-vous</p>
+              <p className="pointer text-white bav" style={{ color: textColor(pathname) }}>Prendre rendez-vous</p>
             </Link>
           </div>
         </div>

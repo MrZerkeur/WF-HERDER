@@ -17,14 +17,19 @@ const MobileCarousel = ({ data, setbacki }: { data: { image: string }[], setback
   ];
 
   useEffect(() => {
-    setbacki(backgrounds[activeIndex].image);
+    if (backgrounds[activeIndex]) {
+      setbacki(backgrounds[activeIndex].image);
+    }
   }, [activeIndex, setbacki]);
 
   const updateActiveIndex = () => {
     if (carouselRef.current) {
       const scrollPosition = carouselRef.current.scrollLeft;
       const slideWidth = carouselRef.current.offsetWidth * 0.8;
-      const newIndex = Math.round(scrollPosition / slideWidth);
+      let newIndex = Math.round(scrollPosition / slideWidth);
+
+
+      newIndex = Math.max(0, Math.min(newIndex, backgrounds.length - 1));
       setActiveIndex(newIndex);
     }
   };

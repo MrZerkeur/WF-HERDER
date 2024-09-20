@@ -198,14 +198,15 @@ html {
 
 .back-carousel {
   width: 100%;
-  height: 100vh; 
+  height: 100%; 
   object-fit: cover; 
   object-position: center; 
   z-index: 0; 
 }
 
 .third-lat{
-  height: 100vh;
+  height: fit-content;
+  padding-bottom: 35px;
 }
 .d-model{
   width: 100%;
@@ -360,7 +361,16 @@ body::-webkit-scrollbar {
 
 body.white-background .navbar {
   color: #000; 
-  background-color: red !important;
+  
+}
+
+.lop{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  /* height: 60vh; */
+  z-index: 100;
 }
 
 body.dark-background .navbar {
@@ -389,6 +399,8 @@ body.dark-background .navbar {
 
   align-items: center;
 }
+
+
 
 .reg-first-layer{
   position: absolute;
@@ -456,7 +468,7 @@ body.dark-background .navbar {
 
 @media (max-width: 600px) {
   body{
-    overflow-x:hidden;
+    /* overflow-x:hidden; */
   }
   .iop{
     font-size: 18px;
@@ -487,9 +499,23 @@ body.dark-background .navbar {
   }
 }
 
+
+
+.lghachi{
+  height: 500vh;
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+
 @media (max-width: 1200px) {
+  .lop{
+    /* position: relative;
+    z-index: 0; */
+  }
   .third-lat{
-    height: 90vh;
+    height: fit-content;
+    padding-bottom: 25px;
   }
   .muj{
       font-size: 1.75rem;
@@ -512,6 +538,7 @@ body.dark-background .navbar {
   .model-s{
     display: none;
   }
+  
   .model-v{
     padding: 40px 0;
     
@@ -765,4 +792,8 @@ body.dark-background .navbar {
 .flery{
   padding: 0px 18px;
 }
+.hem{
+  margin-left: 20px;
+}
+
 }
