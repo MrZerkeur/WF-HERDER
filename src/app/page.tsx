@@ -9,6 +9,7 @@ import { useState } from "react";
 import Scrovi from "./components/vidScroll";
 import ScrollFirst from "./components/ScrollFirst";
 import MobileCarousel from "./components/Carou";
+import FrameAnimation from "./components/newWay";
 
 // import { Carousel } from "react-responsive-carousel";
 
@@ -132,17 +133,24 @@ export default function Home() {
       </div>
       </div>
 
+      <div className="model-rawr">
 
- <div className="model-s">
+      <FrameAnimation />
+      </div>
 
+{/* 
+ {/* <div className="model-s">
+
+<FrameAnimation />
       <Scrovi titre="/0001-0240.mp4" />
- </div>
-
+ </div> */}
+{/*
  <div className="model-v">
- {/* <ScrollFirst /> */}
+
  <Scrovi titre="/092.mp4" />
 
- </div>
+ </div> */}
+
 
 
       <div className="flex justify-center py-9 pb-11 lop">

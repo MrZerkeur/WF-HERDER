@@ -27,6 +27,16 @@
   display: none;
 }
 
+.rawr{
+  object-fit: cover;
+    object-position: center;
+}
+
+.model-rawr{
+  height: 400vh;
+  position: relative;
+}
+
 .meh-1{
   top: 60px;
   left: 180px;
